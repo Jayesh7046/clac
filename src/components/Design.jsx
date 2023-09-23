@@ -76,11 +76,11 @@ const Calculator = () => {
           </Prevoius>
           <Current>{current}</Current>
         </Screen>
-        <Button gridSpan={2} onClick={allclearHandler}>
+        <Button gridspan={2} onClick={allclearHandler}>
           AC
         </Button>
         <Button onClick={deleteHandler}>DEL</Button>
-        <Button data={"÷"} onClick={chooseOperationHandler} operation>
+        <Button data={"÷"} onClick={chooseOperationHandler} operation="true">
           ÷
         </Button>
         <Button data={7} onClick={appendValueHandler}>
@@ -93,7 +93,7 @@ const Calculator = () => {
           {" "}
           9
         </Button>
-        <Button data={"x"} operation onClick={chooseOperationHandler}>
+        <Button data={"x"} operation="true" onClick={chooseOperationHandler}>
           x
         </Button>
         <Button data={4} onClick={appendValueHandler}>
@@ -105,7 +105,7 @@ const Calculator = () => {
         <Button data={6} onClick={appendValueHandler}>
           6
         </Button>
-        <Button data={"+"} operation onClick={chooseOperationHandler}>
+        <Button data={"+"} operation="true" onClick={chooseOperationHandler}>
           +
         </Button>
         <Button data={1} onClick={appendValueHandler}>
@@ -117,16 +117,16 @@ const Calculator = () => {
         <Button data={3} onClick={appendValueHandler}>
           3
         </Button>
-        <Button data={"-"} operation onClick={chooseOperationHandler}>
+        <Button data={"-"} operation="true" onClick={chooseOperationHandler}>
           -
         </Button>
-        <Button decimal data={"."} onClick={appendValueHandler}>
+        <Button decimal="true" data={"."} onClick={appendValueHandler}>
           .
         </Button>
         <Button data={0} onClick={appendValueHandler}>
           0
         </Button>
-        <Button gridSpan={2} equals onClick={equalHandler}>
+        <Button gridspan={2} equals="true" onClick={equalHandler}>
           =
         </Button>
       </Container>

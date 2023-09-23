@@ -46,9 +46,9 @@ export const Button = styled.button`
   &:hover {
     background-color: rgba(255, 255, 255, 0.9);
   }
-  ${function ({ gridSpan }) {
-    if (gridSpan) {
-      return `grid-column: span ${gridSpan} ;`;
+  ${function ({ gridspan }) {
+    if (gridspan) {
+      return `grid-column: span ${gridspan} ;`;
     }
   }};
   ${({ operation }) => operation && `background-color:gray;`};
