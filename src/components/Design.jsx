@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Screen, Prevoius, Current, Button } from "./main";
+import "../styles.scss";
 
 const Calculator = () => {
 
@@ -69,67 +69,67 @@ const Calculator = () => {
 
   return (
     <>
-      <Container>
-        <Screen>
-          <Prevoius>
+      <div className="container">
+        <div className="screen">
+          <div className="prevoius">
             {prevoius} {operations}
-          </Prevoius>
-          <Current>{current}</Current>
-        </Screen>
-        <Button gridspan={2} onClick={allclearHandler}>
+          </div>
+          <div className="current">{current}</div>
+        </div>
+        <div className="button gridspan" onClick={allclearHandler}>
           AC
-        </Button>
-        <Button onClick={deleteHandler}>DEL</Button>
-        <Button data={"÷"} onClick={chooseOperationHandler} operation="true">
+        </div>
+        <div className="button" onClick={deleteHandler}>DEL</div>
+        <div className="button operation" data={"÷"} onClick={chooseOperationHandler} >
           ÷
-        </Button>
-        <Button data={7} onClick={appendValueHandler}>
+        </div>
+        <div className="button" data={7} onClick={appendValueHandler}>
           7
-        </Button>
-        <Button data={8} onClick={appendValueHandler}>
+        </div>
+        <div className="button" data={8} onClick={appendValueHandler}>
           8
-        </Button>
-        <Button data={9} onClick={appendValueHandler}>
+        </div>
+        <div className="button" data={9} onClick={appendValueHandler}>
           {" "}
           9
-        </Button>
-        <Button data={"x"} operation="true" onClick={chooseOperationHandler}>
+        </div>
+        <div className="button operation" data={"x"} onClick={chooseOperationHandler}>
           x
-        </Button>
-        <Button data={4} onClick={appendValueHandler}>
+        </div>
+        <div className="button" data={4} onClick={appendValueHandler}>
           4
-        </Button>
-        <Button data={5} onClick={appendValueHandler}>
+        </div>
+        <div className="button" data={5} onClick={appendValueHandler}>
           5
-        </Button>
-        <Button data={6} onClick={appendValueHandler}>
+        </div>
+        <div className="button" data={6} onClick={appendValueHandler}>
           6
-        </Button>
-        <Button data={"+"} operation="true" onClick={chooseOperationHandler}>
+        </div>
+        <div className="button operation" data={"+"} onClick={chooseOperationHandler}>
           +
-        </Button>
-        <Button data={1} onClick={appendValueHandler}>
+        </div>
+        <div className="button" data={1} onClick={appendValueHandler}>
           1
-        </Button>
-        <Button data={2} onClick={appendValueHandler}>
+        </div>
+        <div className="button" data={2} onClick={appendValueHandler}>
           2
-        </Button>
-        <Button data={3} onClick={appendValueHandler}>
+        </div>
+        <div className="button" data={3} onClick={appendValueHandler}>
           3
-        </Button>
-        <Button data={"-"} operation="true" onClick={chooseOperationHandler}>
+        </div>
+        <div className="button operation" data={"-"} onClick={chooseOperationHandler}>
           -
-        </Button>
-        <Button decimal="true" data={"."} onClick={appendValueHandler}>
+        </div>
+        <div className="button decimal" data={"."} onClick={appendValueHandler}>
           .
-        </Button>
-        <Button data={0} onClick={appendValueHandler}>
+        </div>
+        <div className="button" data={0} onClick={appendValueHandler}>
           0
-        </Button>
-        <Button gridspan={2} equals="true" onClick={equalHandler}>
+        </div>
+        <div className="button gridspan equals"  onClick={equalHandler}>
           =
-        </Button>
-      </Container>
+        </div>
+      </div>
     </>
   );
 };
